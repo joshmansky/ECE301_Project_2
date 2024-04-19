@@ -53,14 +53,14 @@ audiowrite('radio1.wav', radio1,44100);
 %Band 5: 5 to 6 kHz
 %Band 6: 6.2 to 7.2 kHz
 
-x1carrier = cos(2 * pi * 500 * t);
+x1carrier = cos(2 * pi * 700 * t);
 x2carrier = cos(2 * pi * 1900 * t);
 x3carrier = cos(2 * pi * 3100 * t);
 x4carrier = cos(2 * pi * 4300 * t);
 x5carrier = cos(2 * pi * 5500 * t);
 x6carrier = cos(2 * pi * 6700 * t);
 
-x1_lp_ssb = sin(2 * pi * 500 * t) ./ (pi * t);
+x1_lp_ssb = sin(2 * pi *  700 * t) ./ (pi * t);
 x2_lp_ssb = sin(2 * pi * 1900 * t) ./ (pi * t);
 x3_lp_ssb = sin(2 * pi * 3100 * t) ./ (pi * t);
 x4_lp_ssb = sin(2 * pi * 4300 * t) ./ (pi * t);
