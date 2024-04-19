@@ -45,7 +45,7 @@ radio1 = x1_lpf .* x1carrier + x2_lpf .* x2carrier + x3_lpf .* x3carrier;
 radio1 = 2 .* radio1;
 audiowrite('radio1.wav', radio1,44100);
 
-%%Radio 2
+%%Radio 2.
 %Band 1: 0.2 to 1.2 kHz
 %Band 2: 1.4 to 2.4 kHz
 %Band 3: 2.6 to 3.6 kHz
