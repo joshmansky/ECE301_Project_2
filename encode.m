@@ -45,7 +45,7 @@ radio1 = x1_lpf .* x1carrier + x2_lpf .* x2carrier + x3_lpf .* x3carrier;
 radio1 = 2 .* radio1;
 audiowrite('radio1.wav', radio1,44100);
 
-%%Radio 2.
+%%Radio 2
 %Band 1: 0.2 to 1.2 kHz
 %Band 2: 1.4 to 2.4 kHz
 %Band 3: 2.6 to 3.6 kHz
@@ -67,11 +67,11 @@ x4_lp_ssb = sin(2 * pi * 4300 * t) ./ (pi * t);
 x5_lp_ssb = sin(2 * pi * 5500 * t) ./ (pi * t);
 x6_lp_ssb = sin(2 * pi * 6700 * t) ./ (pi * t);
 
-radio2 = ece301conv(x1 .* x1carrier, x1_lp_ssb) ;
-radio2 = radio2 + ece301conv(x2 .* x2carrier, x2_lp_ssb); 
-radio2 = radio2 + ece301conv(x3 .* x3carrier, x3_lp_ssb);
-radio2 = radio2 + ece301conv(x4 .* x4carrier, x4_lp_ssb);
-radio2 = radio2 + ece301conv(x5 .* x5carrier, x5_lp_ssb) ;
-radio2 = radio2 + ece301conv(x6 .* x6carrier, x6_lp_ssb);
+radio2 =          ece301conv(x1_lpf .* x1carrier, x1_lp_ssb) ;
+radio2 = radio2 + ece301conv(x2_lpf .* x2carrier, x2_lp_ssb); 
+radio2 = radio2 + ece301conv(x3_lpf .* x3carrier, x3_lp_ssb);
+radio2 = radio2 + ece301conv(x4_lpf .* x4carrier, x4_lp_ssb);
+radio2 = radio2 + ece301conv(x5_lpf .* x5carrier, x5_lp_ssb) ;
+radio2 = radio2 + ece301conv(x6_lpf .* x6carrier, x6_lp_ssb);
 radio2 = radio2 .* 2;
 audiowrite('radio2.wav', radio2,44100);
